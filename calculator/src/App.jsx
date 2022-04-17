@@ -57,7 +57,7 @@ const App = () => {
   console.log('render', display)
   return (
     <main className="react-calculator ">
-      <h1 className='title'> Calculadora! </h1>
+      <h1 className='title'> Calculadora </h1>
       <Result value={display} />
       
       <Numbers onClickNumber={onClickNumber} />
