@@ -52,7 +52,7 @@ const App = () => {
   }
   
   const item = words(value, /[^-^+^*^/]+/g)
-  const display = item.length > 0 ? (item[item.length-1]).toString() : (0).toString()
+  const display = item.length > 1 ? (item[item.length-1]).toString() : (0).toString()
 
   console.log('render', display)
   return (
