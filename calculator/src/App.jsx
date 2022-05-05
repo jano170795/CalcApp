@@ -6,10 +6,11 @@ import Result from './Components/Render/Result/Result'
 import MathOperations from './Components/MathOperations/MathOperations'
 import Numbers from './Components/Numbers/Numbers'
 import Functions from './Components/Functions/Functions'
+import {operators} from './Shared/data'
 /**Css */
 import './App.css'
 
-
+let oper = ''
 
 const App = () => {
   //console.log("Render App")
@@ -19,20 +20,25 @@ const App = () => {
   
   const onClickOperation = (operation) => {
     if (value !== ''){
-      setValue(`${value}${operation}`)  
+      setValue(`${value}${operation}`)
     }
     
   }
 
-  const onClickEqual = (equal) => {  
+  const onClickEqual = () => { 
     if (value!== ''){
       setValue(eval(value).toString())
-    }      
+    }
   }
 
   const onClickNumber = (number) => {   
-    setValue(`${value}${number}`)      
-  }  
+    if(value === "0"  ){
+      setValue(number)
+    } else {
+      setValue(`${value}${number}`)
+    }
+    
+  }
 
   const onContentClear = () => {
     setValue('')

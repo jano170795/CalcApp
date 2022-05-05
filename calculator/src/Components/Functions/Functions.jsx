@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../Render/Button/Button'
+import {functions} from '../../Shared/data'
 
-const functions = ["Clear", '<--']
 
 const renderButtons = (onContentClear, onDelete) => {
     return(
