@@ -13,7 +13,6 @@ const Button = ({text, type, clickHandler}) => (
 
 Button.propTypes = {
     text: PropTypes.string.isRequired,
-    //type: PropTypes.string.isRequired,
     clickHandler: PropTypes.func.isRequired
 }
 
